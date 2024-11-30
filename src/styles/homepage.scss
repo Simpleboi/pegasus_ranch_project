@@ -1,0 +1,8 @@
+@use "./plug" as p;
+
+main {
+    height: 100vh;
+    background: url("../assets/images/horse-ranch.jpg");
+    background-size: cover;
+    background-position: center;
+}

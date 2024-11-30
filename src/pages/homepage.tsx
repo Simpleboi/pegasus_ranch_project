@@ -1,11 +1,16 @@
 import React from "react";
+import { Nav } from "../components/nav";
+import { Banner, BannerButtons } from "../components/home";
+import "../styles/homepage.scss";
 
 
 const HomePage: React.FC = () => {
     return(
-    <div>
-        <h1>Hello World!</h1>
-    </div>
+    <main>
+        <Nav />
+        <Banner />
+        <BannerButtons />
+    </main>
 )
 };
 

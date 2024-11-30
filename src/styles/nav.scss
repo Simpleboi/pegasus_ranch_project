@@ -1,0 +1,90 @@
+@use "./plug" as p;
+
+#dropdown-container {
+    width: clamp(150px, 30vw, 300px);
+}
+
+#dropdown-basic {
+    background-color: p.$primary-color;
+    height: 100%;
+    width: 100%;
+    padding: 0px 30px;
+    border: none;
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+
+  .nav-logo {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+
+    figure {
+      width: 15%;
+      background-color: black;
+      border-radius: 50%;
+      height: 100%;
+    }
+  }
+
+  .nav-links {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      font-size: clamp(16px, 2vw, 24px);
+      text-decoration: none;
+      color: p.$accent-color;
+      padding: 10px;
+      border-radius: p.$borderRadius;
+    }
+
+    a:hover {
+      color: p.$primary-color;
+      background-color: p.$accent-color;
+      transition: all 0.25s ease;
+    }
+  }
+}
+
+
+// Mobile Nav Section
+.mobile-nav {
+    display: none;
+}
+
+
+@media screen and (max-width: 968px) {
+    nav {
+        .nav-links {
+            width: 75%;
+        }
+        .nav-logo {
+            width: 25%;
+
+            figure {
+                width: 25%;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 678px) {
+  nav {
+    .nav-links,
+    .nav-logo {
+      display: none;
+    }
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+}

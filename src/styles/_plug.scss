@@ -1,0 +1,27 @@
+
+// Universal Styles
+$test: 1px solid red;
+
+
+// Color Pallette
+$primary-color: #8B5E3C;    // Warm Brown
+$primary-second: #4F7942;   // Forrest Green
+$accent-color: #D2B48C;     // Golden Beige
+$accent-second: #7EC8E3;    // Sky Blue
+
+$support-color: #F5F5F5;    // Off-White
+$support-second: #333333;   // Charc Gray
+
+$text-color: #4A3B2F;
+$text-second: #1C1C1C;
+
+// Button Styles
+$borderRadius: 7px;
+
+
+$root-size: 16px;
+
+// Px to rem converter
+@function pxToRem($px) {
+    @return $px / $root-size * 1rem; 
+}

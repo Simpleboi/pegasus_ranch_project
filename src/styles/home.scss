@@ -1,0 +1,83 @@
+@use "./plug" as p;
+
+.banner {
+  margin-top: 5vh;
+  padding-left: 25px;
+
+  .banner-container {
+    width: 70%;
+    padding-left: pxToRem(25px);
+
+    h1 {
+      font-size: clamp(56px, 6vw, 64px);
+      color: p.$primary-color;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 22px;
+      color: p.$support-second;
+    }
+  }
+}
+
+.buttons-container {
+  height: 15vh;
+  padding-left: 25px;
+
+  .inner-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background-color: p.$accent-color;
+      color: p.$primary-color;
+      font-size: 24px;
+      border-radius: p.$borderRadius;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #learn-more {
+      height: 100%;
+      width: 45%;
+    }
+
+    #contact-us {
+      width: 45%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    .banner-container {
+      width: 85%;
+      padding: 10px;
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+
+    .inner-container {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .banner {
+    .banner-container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}
