@@ -1,0 +1,18 @@
+@use "./plug" as p;
+
+.location {
+    // border: 1px solid red;
+    display: flex;
+    background-color: p.$accent-color;
+
+    .location-header {
+        // border: 1px solid red;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 62px;
+        color: p.$primary-color;
+        // height: 100%;
+    }
+}

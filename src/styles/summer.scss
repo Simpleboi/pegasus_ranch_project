@@ -1,0 +1,84 @@
+@use "./plug" as p;
+
+.summer {
+    // border: 1px solid red;
+    display: flex;
+    // height: 70vh;
+    background-color: p.$accent-color;
+
+    .summer-container {
+        // border: 1px solid blue;
+        margin: 20px;
+        box-shadow: p.$boxShadow;
+        border-radius: p.$borderRadius;
+        width: 65%;
+        padding: 20px;
+
+        h1 {
+            // border: 1px solid red;
+            font-size: 50px;
+            color: p.$primary-color;
+        }
+
+        h3 {
+            // border: 1px solid red;
+            font-size: 20px;
+            color: p.$primary-color;
+        }
+
+        .summerDates-container {
+            // border: 1px solid red;
+            height: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 20px;
+
+            button {
+                width: 200px;
+                height: 60px;
+                font-size: 18px;
+                border-radius: p.$borderRadius;
+                border: none;
+                background-color: p.$primary-color;
+                color: p.$support-color;
+            }
+
+            button:hover {
+                background-color: p.$text-color;
+                transition: all 0.25s ease;
+            }
+
+            #payment {
+                width: 300px;
+            }
+        }
+    }
+
+    .summer-right-container {
+        // border: 1px solid purple;
+        width: 35%;
+
+        figure {
+            width: 350px;
+            // border: 1px solid red;
+            height: 350px;
+            margin: auto;
+            box-shadow: p.$boxShadow;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        h3 {
+            margin: 30px auto;
+            text-align: center;
+            color: p.$primary-color;
+        }
+    }
+}

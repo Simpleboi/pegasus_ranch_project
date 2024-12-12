@@ -1,6 +1,5 @@
 @use "./plug" as p;
 
-
 .card-container {
     margin: 10px;
     // border: 1px solid red;
@@ -12,6 +11,8 @@
         color: p.$primary-color;
         background-color: rgba(210, 180, 140, 0.9);
         font-weight: bold;
+        border-radius: p.$borderRadius !important;
+        // border: 1px solid red;
     }
 
     figure {
