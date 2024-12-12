@@ -1,0 +1,12 @@
+@use "./plug" as p;
+
+#gallery-page {
+    // border: 1px solid red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: p.$accent-color;
+}
+

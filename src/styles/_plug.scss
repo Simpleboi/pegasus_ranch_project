@@ -23,6 +23,10 @@ $root-size: 16px;
 $mobile-size: 12px;
 
 
+// Box Shadow
+$boxShadow : 2px 4px 12px rgba(0, 0, 0, 0.2);
+
+
 // Px to rem converter
 @function pxToRem($px) {
     @return $px / $root-size * 1rem; 

@@ -1,0 +1,30 @@
+@use "./plug" as p;
+
+.carousel {
+//   border: 1px solid red;
+  height: 70vh;
+  width: 80%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: p.$boxShadow;
+
+  .carousel-item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+  .carousel-control-prev-icon, 
+  .carousel-control-next-icon {
+    filter: invert(1); 
+  }
+}

@@ -1,0 +1,28 @@
+@use "./plug" as p;
+
+
+.card-container {
+    margin: 10px;
+    // border: 1px solid red;
+    width: clamp(250px, 25%, 350px);
+
+    .card-header {
+        text-align: center;
+        font-size: 36px;
+        color: p.$primary-color;
+        background-color: rgba(210, 180, 140, 0.9);
+        font-weight: bold;
+    }
+
+    figure {
+        height: 250px;
+        width: auto;
+        // margin: auto;
+        border-radius: p.$borderRadius;
+        box-shadow: p.$boxShadow;
+
+        img {
+            border-radius: inherit;
+        }
+    }
+}

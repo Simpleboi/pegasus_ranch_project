@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/activity.scss";
+import { ActivitiesCard } from "../components/card";
 
 export const ActBanner: React.FC = () => {
   return (
@@ -15,6 +16,32 @@ export const ActBanner: React.FC = () => {
 const Activities: React.FC = () => {
   return <section id="activity-page">
     <ActBanner />
+    <aside className="activities-container">
+      <ActivitiesCard 
+      name="Archery"
+      image="/assets/images/archery.jpg"
+      />
+      <ActivitiesCard 
+      name="Arts & Crafts"
+      image="/assets/images/arts-crafts.jpg"
+      />
+      <ActivitiesCard 
+      name="Nature"
+      image="/assets/images/nature-walks.jpg"
+      />
+      <ActivitiesCard 
+      name="Horse Care"
+      image="/assets/images/horse-care.jpg"
+      />
+      <ActivitiesCard 
+      name="Nighttime Activities"
+      image="/assets/images/nighttime.jpg"
+      />
+      <ActivitiesCard 
+      name="Horseback Riding"
+      image="/assets/images/horse-riding.jpg"
+      />
+    </aside>
   </section>;
 };
 
