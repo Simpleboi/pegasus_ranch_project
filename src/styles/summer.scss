@@ -48,6 +48,7 @@
 
             button:hover {
                 background-color: p.$text-color;
+                box-shadow: p.$boxShadow;
                 transition: all 0.25s ease;
             }
 

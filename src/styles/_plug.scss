@@ -31,3 +31,10 @@ $boxShadow : 2px 4px 12px rgba(0, 0, 0, 0.2);
 @function pxToRem($px) {
     @return $px / $root-size * 1rem; 
 }
+
+// For aligning items center
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

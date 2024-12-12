@@ -1,9 +1,9 @@
 import Carousel from "react-bootstrap/Carousel";
 import CarouselImage from "./caroUelImage";
 import "../styles/carousel.scss";
-import winterCamp from "../../public/assets/images/winter-camp-baner.jpg";
-import miniBanner from "../../public/assets/images/schedule-mini-banner.jpg";
-import homepage from "../../public/assets/images/activies-homepage.jpg";
+import winterCamp from "/assets/images/winter-camp-baner.jpg";
+import miniBanner from "/assets/images/schedule-mini-banner.jpg";
+import homepage from "/assets/images/activies-homepage.jpg";
 
 function CarouselCard() {
   return (

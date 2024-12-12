@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Gallery from "./pages/gallery";
 import { Schedule } from "./pages/schedule";
 import { Location } from "./pages/location";
+import { Footer } from "./pages/footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Gallery />
       <Schedule />
       <Location />
+      <Footer />
     </>
   );
 }
