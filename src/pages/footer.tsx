@@ -31,7 +31,7 @@ export const FooterSocialLinks = () => {
     <div className="footer-socials">
       <h1>Join our Community</h1>
       <div className="social-container">
-        <a href="#">
+        <a href="https://www.facebook.com/100068308787740/menu/?ref=PROFILE_PLUS_ABOUT_TAB" target="_blank">
           <i className="bx bxl-facebook"></i>
         </a>
         <a href="#">

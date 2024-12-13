@@ -6,11 +6,16 @@ import Gallery from "./pages/gallery";
 import { Schedule } from "./pages/schedule";
 import { Location } from "./pages/location";
 import { Footer } from "./pages/footer";
+import { AboutOne, AboutTwo } from "./pages/about";
+import { Document } from "./pages/document";
 
 function App() {
   return (
     <>
       <HomePage />
+      <AboutOne />
+      <AboutTwo />
+      <Document />
       <Activities />
       <Gallery />
       <Schedule />

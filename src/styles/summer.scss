@@ -4,12 +4,12 @@
     // border: 1px solid red;
     display: flex;
     // height: 70vh;
-    background-color: p.$accent-color;
+    background-color: p.$support-color;
 
     .summer-container {
         // border: 1px solid blue;
         margin: 20px;
-        box-shadow: p.$boxShadow;
+        // box-shadow: p.$boxShadow;
         border-radius: p.$borderRadius;
         width: 65%;
         padding: 20px;
@@ -66,13 +66,14 @@
             width: 350px;
             // border: 1px solid red;
             height: 350px;
-            margin: auto;
+            margin: 20px auto;
             box-shadow: p.$boxShadow;
 
             img {
                 object-fit: cover;
                 height: 100%;
                 width: 100%;
+                border-radius: p.$borderRadius;
             }
         }
 

@@ -1,0 +1,96 @@
+@use "./plug" as p;
+
+.about-top {
+//   border: 1px solid red;
+  display: flex;
+//   height: 50vh;
+  background-color: p.$accent-color;
+
+  .about-top-left {
+    // border: 1px solid red;
+    width: 50%;
+
+    h1 {
+    //   border: 1px solid red;
+      padding: 20px;
+      font-size: 50px;
+      color: p.$primary-color;
+    }
+
+    p {
+    //   border: 1px solid red;
+      padding: 30px;
+      font-size: 20px;
+      color: p.$primary-color;
+    }
+  }
+
+  .about-top-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    div {
+    //   border: 1px solid red;
+      height: 100%;
+      @include p.flexCenter;
+
+      figure {
+        width: 70%;
+        height: 70%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          border-radius: p.$borderRadius;
+          box-shadow: p.$boxShadow;
+        }
+      }
+    }
+  }
+}
+
+.about-bottom {
+//   border: 2px solid red;
+  display: flex;
+  background-color: p.$accent-color;
+  //   @include p.flexCenter;
+
+  .about-bottom-left {
+    width: 50%;
+
+    p {
+    //   border: 1px solid red;
+      padding: 20px;
+      font-size: 20px;
+      color: p.$primary-color;
+    }
+  }
+
+  .about-bottom-right {
+    // border: 2px solid red;
+    width: 50%;
+
+    div {
+    //   border: 1px solid red;
+      height: 100%;
+      @include p.flexCenter;
+
+      figure {
+        width: 70%;
+        height: 70%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          border-radius: p.$borderRadius;
+          box-shadow: p.$boxShadow;
+        }
+      }
+    }
+  }
+}
