@@ -7,7 +7,7 @@ import { Schedule } from "./pages/schedule";
 import { Location } from "./pages/location";
 import { Footer } from "./pages/footer";
 import { AboutOne, AboutTwo } from "./pages/about";
-import { Document } from "./pages/document";
+import { Document, DocumentHeading } from "./pages/document";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
       <HomePage />
       <AboutOne />
       <AboutTwo />
+      <DocumentHeading />
       <Document />
       <Activities />
       <Gallery />

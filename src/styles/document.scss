@@ -1,7 +1,69 @@
 @use "./plug" as p;
 
-
 #document {
-    border: 1px solid red;
-    height: 60vh;
+//   border: 1px solid red;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .doc-card {
+    // border: 1px solid red;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 0 auto;
+
+    a {
+        // border: 1px solid red;
+        width: 80%;
+        height: 50px;
+        display: block;
+        padding: 10px;
+        font-size: 22px;
+        background-color: p.$primary-color;
+        color: p.$support-color;
+        @include p.flexCenter;
+        text-decoration: none;
+        border-radius: p.$borderRadius;
+    }
+
+    a:hover {
+        background-color: p.$text-color;
+        color: p.$accent-color;
+        box-shadow: p.$boxShadow;
+        transition: all 0.25s ease;
+    }
+
+    figure {
+      width: 300px;
+      height: 400px;
+
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        border-radius: p.$borderRadius;
+        box-shadow: p.$boxShadow;
+      }
+    }
+  }
+}
+
+.doc-heading {
+    // border: 1px solid red;
+
+    h1 {
+        padding: 30px 0px 0px 20px;
+        // border: 1px solid red;
+        color: p.$primary-color;
+    }
+
+    p {
+        font-size: 20px;
+        color: p.$primary-color;
+        padding: 10px 20px;
+        // border: 1px solid red;
+    }
 }

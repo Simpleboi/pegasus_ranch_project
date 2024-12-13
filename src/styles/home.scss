@@ -26,12 +26,11 @@
   padding-left: 25px;
 
   .inner-container {
-    width: 40%;
+    width: 30%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     button {
       background-color: p.$accent-color;
       color: p.$primary-color;
