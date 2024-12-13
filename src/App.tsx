@@ -8,6 +8,7 @@ import { Location } from "./pages/location";
 import { Footer } from "./pages/footer";
 import { AboutOne, AboutTwo } from "./pages/about";
 import { Document, DocumentHeading } from "./pages/document";
+import { PrivateLessons } from "./components/privateLessons";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Activities />
       <Gallery />
       <Schedule />
+      <PrivateLessons />
       <Location />
       <Footer />
     </>
