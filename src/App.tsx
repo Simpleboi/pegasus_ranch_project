@@ -22,8 +22,8 @@ function App() {
       {/* <Gallery /> */}
       {/* <Schedule /> */}
       {/* <PrivateLessons /> */}
-      {/* <Location />
-      <Footer /> */}
+      <Location />
+      {/* <Footer /> */}
     </>
   );
 }

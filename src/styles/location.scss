@@ -15,4 +15,26 @@
         color: p.$primary-color;
         // height: 100%;
     }
+
+    .location-map-container {
+        // border: 1px solid red;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: p.$tablet-sm) {
+    .location {
+        flex-direction: column;
+
+        .location-header {
+            // border: 3px solid red;
+            width: 100%;
+        }
+
+        .location-map-container {
+            // border: 5px solid red;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
 }
