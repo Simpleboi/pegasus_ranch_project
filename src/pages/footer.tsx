@@ -8,7 +8,7 @@ export const FooterContact = () => {
       <ul className="footer-contact-links">
         <li>
           <i className="bx bx-phone">
-            <a href="tel:+7136704032">713-670-4032</a>
+            <a href="tel:+9795334335">(979)-533-4335</a>
           </i>
         </li>
         <li>

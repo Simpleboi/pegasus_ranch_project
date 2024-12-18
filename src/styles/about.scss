@@ -1,7 +1,7 @@
 @use "./plug" as p;
 
 .about-top {
-//   border: 1px solid red;
+  // border: 1px solid red;  
   display: flex;
 //   height: 50vh;
   background-color: p.$accent-color;
@@ -89,6 +89,61 @@
           display: block;
           border-radius: p.$borderRadius;
           box-shadow: p.$boxShadow;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: p.$tablet-sm) {
+  .about-top {
+    // border: 2px solid blue;
+    flex-direction: column-reverse;
+
+    .about-top-left {
+      // border: 1px solid red;
+      width: 100%;
+
+      h1 {
+        text-align: center;
+      }
+    }
+
+    .about-top-right {
+      width: 100%;
+
+      div {
+        width: 75%;
+        height: 75%;
+        margin: auto;
+
+        figure {
+          margin: 20px auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .about-bottom {
+    flex-direction: column;
+
+    .about-bottom-left {
+      // border: 1px solid red;
+      width: 100%;
+    }
+
+    .about-bottom-right {
+      // border: 1px solid red;
+      width: 100%;
+
+      div {
+        margin: 20px auto;
+
+        figure {
+          width: 75%;
+          height: 75%;
         }
       }
     }
