@@ -23,7 +23,7 @@ function App() {
       {/* <Schedule /> */}
       {/* <PrivateLessons /> */}
       <Location />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
