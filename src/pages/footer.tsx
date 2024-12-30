@@ -3,7 +3,7 @@ import "../styles/footer.scss";
 
 export const FooterContact = () => {
   return (
-    <div className="footer-contact">
+    <div className="footer-contact" id="footer">
       <h1>Contact Us</h1>
       <ul className="footer-contact-links">
         <li>
@@ -73,7 +73,7 @@ export const FooterQuickLinks = () => {
       <div className="ql-container">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
+        <a href="#gallery-page">Gallery</a>
         <a href="#schedule">Schedule</a>
         <a href="#activities">Activities</a>
       </div>

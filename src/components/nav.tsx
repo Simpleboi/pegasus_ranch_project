@@ -53,10 +53,10 @@ export const Nav: React.FC = () => {
       </div>
       <div className="nav-links">
         <a href="#">Schedule</a>
-        <a href="#">About Us</a>
+        <a href="#about">About Us</a>
         <a href="#">Activities</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
+        <a href="#gallery-page">Gallery</a>
+        <a href="#footer">Contact</a>
       </div>
     </nav>
   );

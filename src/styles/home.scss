@@ -24,13 +24,15 @@
 .buttons-container {
   height: 15vh;
   padding-left: 25px;
+  // border: 1px solid red;
 
   .inner-container {
-    width: 30%;
-    height: 100%;
+    width: 40%;
+    height: 7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     button {
       background-color: p.$accent-color;
       color: p.$primary-color;
@@ -54,6 +56,22 @@
     #contact-us {
       width: 45%;
       height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .buttons-container {
+    // border: 1px solid red;
+
+    .inner-container {
+      // border: 1px solid red;
+      width: 60%;
+
+      button {
+        width: 50%;
+        // border: 2px solid red;
+      }
     }
   }
 }
@@ -83,6 +101,13 @@
     .banner-container {
       width: 100%;
       padding: 10px;
+    }
+  }
+
+  .buttons-container {
+    .inner-container {
+      width: 100%;
+      padding: 1rem;
     }
   }
 }

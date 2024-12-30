@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
-import winterCamp from "/assets/images/winter-camp-baner.jpg";
-import miniBanner from "/assets/images/schedule-mini-banner.jpg";
-import homepage from "/assets/images/activies-homepage.jpg";
 import "../styles/gallery.scss";
+import imageOne from "/assets/images/gallery-banner-one.jpg";
+import imageTwo from "/assets/images/gallery-banner-two.png";
+import imageThree from "/assets/images/gallery-banner-three.png";
+import imageFour from "/assets/images/gallery-banner-four.png";
+import imageFive from "/assets/images/gallery-banner-five.png";
+// import imageSix from "/assets/images/gallery-banner-six.png";
+import imageSeven from "/assets/images/gallery-banner-seven.png";
+import imageEight from "/assets/images/gallery-banner-eight.png";
+import imageNine from "/assets/images/gallery-banner-nine.png";
+
 // import CarouselCard from "../components/carousel";
 
 interface CarouselProps {
@@ -13,7 +20,7 @@ interface CarouselProps {
 
 export const Carousel: React.FC<CarouselProps> = ({
   images,
-  autoSlide = true,
+  autoSlide = false,
   slideInterval = 3000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,7 +74,16 @@ export const Carousel: React.FC<CarouselProps> = ({
 };
 
 const Gallery: React.FC = () => {
-  const images = [winterCamp, miniBanner, homepage];
+  const images = [
+    imageOne,
+    imageTwo, 
+    imageThree,
+    imageFour,
+    imageFive,
+    imageSeven,
+    imageEight,
+    imageNine
+  ]
 
   return (
     <section id="gallery-page">

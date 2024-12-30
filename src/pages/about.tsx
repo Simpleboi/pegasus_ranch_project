@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/about.scss";
-import horse from "/assets/images/horse-care.jpg";
-import nature from "/assets/images/nature.jpg";
+// import horse from "/assets/images/horse-care.jpg";
+// import nature from "/assets/images/nature.jpg";
+import beth from "/assets/images/beth.png"
+import gang from "/assets/images/about-image-two.png"
+import girl from "/assets/images/about-image-three.png"
 
 export const AboutOne: React.FC = () => {
   return (
@@ -9,7 +12,10 @@ export const AboutOne: React.FC = () => {
       <div className="about-top-right">
         <div>
           <figure>
-            <img src={horse} alt="#" />
+            <img src={beth} alt="#" />
+          </figure>
+          <figure>
+            <img src={girl} alt="#" />
           </figure>
         </div>
       </div>
@@ -92,7 +98,7 @@ export const AboutTwo = () => {
       <div className="about-bottom-right">
         <div>
           <figure>
-            <img src={nature} alt="#" />
+            <img src={gang} alt="#" />
           </figure>
         </div>
       </div>
