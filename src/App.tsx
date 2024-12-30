@@ -19,7 +19,7 @@ function App() {
       <DocumentHeading />
       <Document />
       {/* <Activities /> */}
-      {/* <Gallery /> */}
+      <Gallery />
       {/* <Schedule /> */}
       {/* <PrivateLessons /> */}
       <Location />

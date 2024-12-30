@@ -1,24 +1,15 @@
-import Carousel from "react-bootstrap/Carousel";
-import CarouselImage from "./caroUelImage";
+// import CarouselImage from "./caroUelImage";
 import "../styles/carousel.scss";
-import winterCamp from "/assets/images/winter-camp-baner.jpg";
-import miniBanner from "/assets/images/schedule-mini-banner.jpg";
-import homepage from "/assets/images/activies-homepage.jpg";
+import { Carousel } from "../pages/gallery";
 
 function CarouselCard() {
-  return (
-    <Carousel className="carousel">
-      <Carousel.Item className="carousel-item">
-        <CarouselImage text="First slide" url={winterCamp} />
-      </Carousel.Item>
-      <Carousel.Item>
-        <CarouselImage text="Second slide" url={miniBanner}/>
-      </Carousel.Item>
-      <Carousel.Item>
-        <CarouselImage text="Third slide" url={homepage}/>
-      </Carousel.Item>
-    </Carousel>
-  );
+  const images = [
+    "https://via.placeholder.com/800x400?text=Slide+1",
+    "https://via.placeholder.com/800x400?text=Slide+2",
+    "https://via.placeholder.com/800x400?text=Slide+3",
+  ];
+
+  return <Carousel images={images}></Carousel>;
 }
 
 export default CarouselCard;
