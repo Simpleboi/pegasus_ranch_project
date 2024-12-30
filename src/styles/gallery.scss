@@ -2,7 +2,7 @@
 
 #gallery-page {
   // border: 1px solid red;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,9 @@
 
   h1 {
     padding-top: 2rem;
-    font-size: 60px;
+    font-size: clamp(50px, 4vw, 60px);
+    width: 100%;
+    text-align: center;
     color: p.$primary-color;
   }
   p {
@@ -22,7 +24,6 @@
   .carousel {
     position: relative;
     // border: 1px solid red;
-    margin: auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -90,4 +91,19 @@
   .dot.active {
     background-color: white;
   }
+}
+
+
+@media screen and (max-width: 678px) {
+    #gallery-page {
+        // border: 1px solid red;
+
+        h1 {
+            font-size: clamp(32px, 8vw, 60px);
+        }
+        p {
+            text-align: center;
+            padding: 1rem;
+        }
+    }
 }

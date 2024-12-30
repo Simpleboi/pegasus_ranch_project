@@ -1,33 +1,27 @@
 @use "./plug" as p;
 
 .summer {
-    // border: 1px solid red;
     display: flex;
-    // height: 70vh;
+    height: auto;
     background-color: p.$support-color;
 
     .summer-container {
-        // border: 1px solid blue;
         margin: 20px;
-        // box-shadow: p.$boxShadow;
         border-radius: p.$borderRadius;
         width: 65%;
         padding: 20px;
 
         h1 {
-            // border: 1px solid red;
             font-size: 50px;
             color: p.$primary-color;
         }
 
         h3 {
-            // border: 1px solid red;
             font-size: 20px;
             color: p.$primary-color;
         }
 
         .summerDates-container {
-            // border: 1px solid red;
             height: 50%;
             display: flex;
             flex-wrap: wrap;
@@ -59,13 +53,11 @@
     }
 
     .summer-right-container {
-        // border: 1px solid purple;
         width: 35%;
 
         figure {
-            width: 350px;
-            // border: 1px solid red;
-            height: 350px;
+            width: 90%;
+            height: 50%;
             margin: 20px auto;
             box-shadow: p.$boxShadow;
 
@@ -81,6 +73,65 @@
             margin: 30px auto;
             text-align: center;
             color: p.$primary-color;
+            padding: 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .summer {
+        .summer-container {
+            width: 40%;
+
+            .summerDates-container {
+                height: auto;
+
+                button, #payment {
+                    width: 100%;
+                }
+            }
+        }
+        .summer-right-container {
+            width: 60%;
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .summer {
+        flex-direction: column;
+
+        .summer-container {
+            width: 100%;
+            margin: 0 auto;
+
+            .summerDates-container {
+                
+                button, #payment {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .summer-right-container {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 493px) {
+    .summer {
+        .summer-container {
+            .summerDates-container {
+                button, #payment {
+                    width: 100%;
+                }
+            }
         }
     }
 }
