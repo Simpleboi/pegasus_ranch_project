@@ -1,21 +1,10 @@
 @use "./plug" as p;
 
-#dropdown-container {
-    width: clamp(150px, 30vw, 300px);
-}
-
-#dropdown-basic {
-    background-color: p.$primary-color;
-    height: 100%;
-    width: 100%;
-    padding: 0px 30px;
-    border: none;
-}
-
 nav {
   height: 10vh;
   width: 100%;
   display: flex;
+  z-index: 1;
 
   .nav-logo {
     width: 40%;
@@ -52,29 +41,99 @@ nav {
   }
 }
 
-
 // Mobile Nav Section
 .mobile-nav {
-    display: none;
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .mobile-nav-logo {
+    border: 1px solid red;
+    @include p.flexCenter;
+  }
+
+  .mobile-toggle {
+    // border: 1px solid red;
+    cursor: pointer;
+    width: 20%;
+    border: none;
+    background: none;
+
+    i {
+      // border: 1px solid red;
+      font-size: 2.25rem;
+      color: p.$text-color;
+    }
+  }
 }
 
+// Mobile slider
+
+.mobile-slider {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+
+  &.open {
+    right: 0;
+  }
+
+  ul.mobile-slider-links {
+    list-style: none;
+    padding: 2rem;
+    margin: 0;
+    border: 2px solid red;
+
+    li {
+      margin: 1rem 0;
+      border: 2px solid red;
+
+      a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.2rem;
+        border: 2px solid red;
+
+        &:hover {
+          color: #818cf8;
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
 
 @media screen and (max-width: 968px) {
-    nav {
-        .nav-links {
-            width: 75%;
-        }
-        .nav-logo {
-            width: 25%;
-
-            figure {
-                width: 25%;
-            }
-        }
+  nav {
+    .nav-links {
+      width: 75%;
     }
+    .nav-logo {
+      width: 25%;
+
+      figure {
+        width: 25%;
+      }
+    }
+  }
 }
-
-
 
 @media screen and (max-width: 678px) {
   nav {

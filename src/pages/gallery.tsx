@@ -9,6 +9,14 @@ import imageFive from "/assets/images/gallery-banner-five.png";
 import imageSeven from "/assets/images/gallery-banner-seven.png";
 import imageEight from "/assets/images/gallery-banner-eight.png";
 import imageNine from "/assets/images/gallery-banner-nine.png";
+import imageTen from "/assets/images/gallery-banner-ten.png";
+import imageEleven from "/assets/images/gallery-banner-eleven.png";
+import imageTwelve from "/assets/images/gallery-banner-twelve.png";
+import imageThirteen from "/assets/images/gallery-banner-thirteen.png";
+import imageFourteen from "/assets/images/gallery-banner-fourteen.png";
+import imageSixteen from "/assets/images/gallery-banner-sixteen.png";
+import imageSeventeen from "/assets/images/gallery-banner-seventeen.png";
+
 
 // import CarouselCard from "../components/carousel";
 
@@ -50,18 +58,29 @@ export const Carousel: React.FC<CarouselProps> = ({
       <button className="carousel-button prev" onClick={prevImage}>
         <i className="bx bx-chevron-left"></i>
       </button>
-      <figure className="carousel-image-wrapper">
-        <img
-          src={images[currentIndex]}
-          alt={`Slide ${currentIndex}`}
-          className="carousel-image"
-        />
-      </figure>
+      <div className="carousel-track-wrapper">
+        <div
+          className="carousel-track"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
+          {images.map((image, index) => (
+            <figure key={index} className="carousel-image-wrapper">
+              <img
+                src={image}
+                alt={`Slide ${index}`}
+                className="carousel-image"
+              />
+            </figure>
+          ))}
+        </div>
+      </div>
       <button className="carousel-button next" onClick={nextImage}>
         <i className="bx bx-chevron-right"></i>
       </button>
       <div className="carousel-dots">
-        {images.map((_: any, index: any) => (
+        {images.map((_, index) => (
           <span
             key={index}
             className={`dot ${index === currentIndex ? "active" : ""}`}
@@ -82,7 +101,14 @@ const Gallery: React.FC = () => {
     imageFive,
     imageSeven,
     imageEight,
-    imageNine
+    imageNine,
+    imageTen,
+    imageEleven,
+    imageTwelve,
+    imageThirteen,
+    imageFourteen,
+    imageSixteen,
+    imageSeventeen
   ]
 
   return (

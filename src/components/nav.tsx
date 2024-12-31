@@ -1,25 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/nav.scss";
-import Dropdown from "react-bootstrap/Dropdown";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export const MobileNav: React.FC = () => {
-  return (
-    <Dropdown id="dropdown-container">
-      <Dropdown.Toggle variant="success" id="dropdown-basic" className="toggle">
-        Links
-      </Dropdown.Toggle>
+  const [isSliderOpen, setIsSliderOpen] = useState(false);
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1" id="dropdown-item">
-          Schedule
-        </Dropdown.Item>
-        <Dropdown.Item href="#/action-2">About Us</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Activitites</Dropdown.Item>
-        <Dropdown.Item href="#/action-4">Gallery</Dropdown.Item>
-        <Dropdown.Item href="#/action-5">Contact</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+  const ToggleMobileSlider = () => {
+    setIsSliderOpen(!isSliderOpen);
+  };
+
+  return (
+    <section className="mobile-nav">
+      <div className="mobile-nav-logo">Pegasus Ranch</div>
+      <button
+        className="mobile-toggle"
+        onClick={ToggleMobileSlider}
+        aria-expanded={isSliderOpen}
+      >
+        <i className="bx bx-menu"></i>
+      </button>
+      {isSliderOpen && <MobileNavSlider onClose={ToggleMobileSlider} />}
+    </section>
+  );
+};
+
+interface MobileNavSliderProps {
+  onClose: () => void;
+}
+
+export const MobileNavSlider: React.FC<MobileNavSliderProps> = ({
+  onClose,
+}) => {
+  return (
+    <>
+      <div className="mobile-slider">
+        <ul className="mobile-slider-links">
+          <li>
+            <a href="#schedule">Schedule</a>
+          </li>
+          <li>
+            <a href="#about">About Us</a>
+          </li>
+          <li>
+            <a href="#activities">Activities</a>
+          </li>
+          <li>
+            <a href="#gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div className="overlay" onClick={onClose}></div>
+    </>
   );
 };
 
