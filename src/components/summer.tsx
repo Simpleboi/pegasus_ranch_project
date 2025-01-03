@@ -4,7 +4,7 @@ import summerBanner from "/assets/images/schedule-mini-banner.jpg";
 
 export const Summer: React.FC = () => {
   return (
-    <aside className="summer">
+    <aside className="summer" id="summer">
       <div className="summer-container">
         <h1>Summer Schedule</h1>
         <h3>Cowboys & Cowgirls ages 6 - 15</h3>

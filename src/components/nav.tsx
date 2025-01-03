@@ -11,7 +11,7 @@ export const MobileNav: React.FC = () => {
 
   return (
     <section className="mobile-nav">
-      <div className="mobile-nav-logo">Pegasus Ranch</div>
+      <div className="mobile-nav-logo">PR</div>
       <button
         className="mobile-toggle"
         onClick={ToggleMobileSlider}
@@ -31,24 +31,46 @@ interface MobileNavSliderProps {
 export const MobileNavSlider: React.FC<MobileNavSliderProps> = ({
   onClose,
 }) => {
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [onClose]);
+
   return (
     <>
-      <div className="mobile-slider">
+      <div className="mobile-slider open">
         <ul className="mobile-slider-links">
           <li>
-            <a href="#schedule">Schedule</a>
+            <a href="#summer" onClick={onClose}>
+              Schedule
+            </a>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <a href="#about" onClick={onClose}>
+              About Us
+            </a>
           </li>
           <li>
-            <a href="#activities">Activities</a>
+            <a href="#activities" onClick={onClose}>
+              Activities
+            </a>
           </li>
           <li>
-            <a href="#gallery">Gallery</a>
+            <a href="#gallery-page" onClick={onClose}>
+              Gallery
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#footer" onClick={onClose}>
+              Contact
+            </a>
           </li>
         </ul>
       </div>
@@ -56,7 +78,6 @@ export const MobileNavSlider: React.FC<MobileNavSliderProps> = ({
     </>
   );
 };
-
 export const Nav: React.FC = () => {
   const [isMobileView, setIsMobileView] = useState<boolean>(
     window.innerWidth < 678
@@ -83,10 +104,10 @@ export const Nav: React.FC = () => {
     <nav>
       {isMobileView ? <MobileNav /> : <></>}
       <div className="nav-logo">
-        <figure></figure>
+        <figure>PR</figure>
       </div>
       <div className="nav-links">
-        <a href="#">Schedule</a>
+        <a href="#summer">Schedule</a>
         <a href="#about">About Us</a>
         <a href="#">Activities</a>
         <a href="#gallery-page">Gallery</a>
